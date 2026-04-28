@@ -1,0 +1,141 @@
+.form {
+  padding-top: 36px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+.form input::placeholder {
+  color: #808080;
+}
+.form input {
+  background-color: #ffffff;
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #2e2f42;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 4%;
+  border-color: #808080;
+  border-width: 1px;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  padding-left: 16px;
+}
+.form input:hover,
+.form input:focus {
+  outline: none;
+  border-color: #000000;
+  border-width: 1px;
+}
+.form button {
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 4%;
+  background-color: #4e75ff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1128px;
+  margin-top: 32px;
+  row-gap: 24px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.info-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 4px 25px;
+  position: absolute;
+  bottom: 0;
+  background-color: #ffffff;
+}
+.gallery-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #808080;
+  flex-basis: calc((100% - 48px) / 3);
+}
+.gallery-item-link {
+  padding: 0;
+  margin: 0;
+}
+.gallery-image {
+  width: 360px;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  overflow: hidden;
+}
+.tag-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-family: Montserrat;
+  color: #2e2f42;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 4%;
+  align-items: center;
+}
+.tag-value {
+  font-size: 12px;
+  font-family: Montserrat;
+  color: #2e2f42;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 4%;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: inline-block;
+}
+.loader::after,
+.loader::before {
+  content: '';
+  box-sizing: border-box;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #65abff;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: rotation 2s ease-in-out infinite alternate;
+}
+.loader::after {
+  border-color: hsl(259, 100%, 54%);
+  animation-direction: alternate-reverse;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}

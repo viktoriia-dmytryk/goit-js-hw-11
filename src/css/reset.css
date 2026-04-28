@@ -25,10 +25,23 @@ a {
 
 button {
   cursor: pointer;
+  padding: 0;
+  border: none;
+  background: none;
 }
 
 img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
